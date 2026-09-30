@@ -4,7 +4,7 @@ A scroll-driven product animation: 300 frames of a leather wallet being made,
 scrubbed frame-by-frame as the page scrolls. The technique premium product
 pages use, in a single self-contained HTML file.
 
-**[View it](https://turbocode99.github.io/wallet-scroll-animation/)** once GitHub Pages is enabled (Settings → Pages → deploy from `main`, root).
+**[View it](https://turbocode99.github.io/Wallet-Web-App/)** once GitHub Pages is enabled (Settings → Pages → deploy from `main`, root).
 
 ## Running it
 
