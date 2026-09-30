@@ -42,6 +42,37 @@ counts toward completion too, so a bad frame cannot hang the loader forever.
 intrinsic dimensions, and CSS (`max-width/max-height:100%`) handles the fit —
 so the sequence stays sharp without hardcoding a resolution.
 
+## Working on this from another machine
+
+The repository is **private**, so the other device needs to be signed in to
+GitHub first — either the CLI:
+
+```bash
+gh auth login -h github.com -w
+```
+
+or an HTTPS clone using a personal access token with `repo` scope.
+
+```bash
+git clone https://github.com/turbocode99/wallet-web-app.git
+```
+
+That is the whole setup. There is no install step, no dependencies and no
+build — open `index.html` and it runs.
+
+Normal round trip:
+
+```bash
+git pull --ff-only && git add -A && git commit -m "..." && git push
+```
+
+**Pull before you edit, and edit on one machine at a time.** `index.html` is a
+single ~9 MB file that is almost entirely one long array of base64 frames, so
+if the same file is changed on two devices, git cannot produce a meaningful
+three-way merge — the conflict arrives as megabytes of interleaved base64 with
+no sane way to resolve it by hand. `--ff-only` makes git refuse to
+auto-create a merge in that situation rather than handing you that mess.
+
 ## Structure
 
 | | |
